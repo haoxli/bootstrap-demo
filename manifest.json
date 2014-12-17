@@ -1,0 +1,15 @@
+{
+    "version": "0.2",
+    "name": "DemoExpress",
+    "permissions": [],
+    "description": "DemoExpress",
+    "file_name": "manifest.json",
+    "app": {
+        "launch": {
+            "local_path": "index.html"
+        }
+    },
+    "icons": {
+        "128": "icon.png"
+    }
+}

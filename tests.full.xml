@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<test_definition>
+  <suite name="DemoExpress">
+    <set name="Runtime &amp;amp; Packaging" background="brand-primary" icon="glyphicon-asterisk">
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="AppURI" purpose="App URI">
+      </testcase>
+    </set>
+    <set name="Multimedia &amp;amp; Graphics" background="brand-success" icon="glyphicon-facetime-video">
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="AnimationTransform" purpose="Animation Transform">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="AudioPlay" purpose="Audio Play">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="Canvas" purpose="Canvas">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="CSSAnimation" purpose="CSS Animation">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="CSSStyle" purpose="CSS Style">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="CSSStyleAttribute" purpose="CSS Style Attribute">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="FlexibleBox" purpose="Flexible Box">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="MediaQueries" purpose="Media Queries">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="SVGTransformation" purpose="SVG Transformation">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="Transitions" purpose="Transitions">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="android" priority="P0" id="VideoPlayAndroid" purpose="Video Play">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="tizen" priority="P0" id="VideoPlayTizen" purpose="Video Play">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="WebRTC" purpose="WebRTC">
+      </testcase>
+    </set>
+    <set name="Networking &amp;amp; Storage" background="brand-warning" icon="glyphicon-link">
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="FileReader" purpose="FileReader">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="IndexedDB" purpose="IndexedDB">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="SessionHistory" purpose="Session History">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="WebDatabase" purpose="Web Database">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="WebMessaging" purpose="Web Messaging">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="WebSpeech" purpose="Web Speech">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="WebStorage" purpose="Web Storage">
+      </testcase>
+    </set>
+    <set name="Performance &amp;amp; Optimization" background="brand-danger" icon="glyphicon-th-large">
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="AnimationTiming" purpose="Animation Timing">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="android" priority="P0" id="HrtimeAndroid" purpose="High Resolution Time">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="tizen" priority="P0" id="HrtimeTizen" purpose="High Resolution Time">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="NavigationTiming" purpose="Navigation Timing">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="android" priority="P0" id="PageVisibility" purpose="Page Visibility">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="PerformanceTimeline" purpose="Performance Timeline">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="ResourceTiming" purpose="Resource Timing">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="Selectors" purpose="Selectors">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="TypedArray" purpose="Typed Array">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="Usertiming" purpose="User Timing">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="tizen" priority="P0" id="Viewport" purpose="Viewport">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="Workers" purpose="Workers">
+      </testcase>
+    </set>
+    <set name="Device &amp;amp; Hardware" background="brand-info" icon="glyphicon-hdd">
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="Accelerometer" purpose="Accelerometer">
+        <capability name="accelerometer"/>
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="android" priority="P0" id="BatteryStatus" purpose="Battery Status">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="BrowserState" purpose="Browser State">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="android" priority="P0" id="Camera" purpose="Camera">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="CameraViaUserMedia" purpose="Camera via UserMedia">
+        <capability name="cameraFront"/>
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="FullScreen" purpose="Full Screen">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="Forms" purpose="Forms">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="android" priority="P0" id="GamePad" purpose="GamePad">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="HTMLTemplate" purpose="HTML Template">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="Input" purpose="Input">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="android" priority="P0" id="LocationGPS" purpose="Location GPS">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="Notifications" purpose="Notifications">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="ScreenOrientation" purpose="Screen Orientation">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="ShadowDom" purpose="ShadowDom">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="Touch" purpose="Touch">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="android" priority="P0" id="Vibration" purpose="Vibration">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="WebAudio" purpose="WebAudio">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="WebGL" purpose="WebGL">
+      </testcase>
+    </set>
+    <set name="Social" background="bs-purple" icon="glyphicon-heart">
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="ContactsManager" purpose="Contacts Manager">
+      </testcase>
+    </set>
+    <set name="UI" background="bs-purple-light" icon="glyphicon-magnet">
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="Clipboard" purpose="Clipboard">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="tizen" priority="P0" id="DragandDrop" purpose="Drag and Drop">
+      </testcase>
+    </set>
+    <set name="Security" background="brand-warning3" icon="glyphicon-warning-sign">
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="Sandbox" purpose="Sandbox">
+      </testcase>
+    </set>
+    <set name="Experimental API" background="brand-success3" icon="glyphicon-adjust">
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="DeviceCapabilities" purpose="Device Capabilities">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="android" priority="P0" id="Presentation" purpose="Presentation">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="all" priority="P0" id="SIMD" purpose="SIMD">
+      </testcase>
+    </set>
+    <set name="Tizen Extension APIs" background="brand-primary3" icon="glyphicon-send">
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="tizen" priority="P0" id="ApplicationManager" purpose="ApplicationManager">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="tizen" priority="P0" id="AudioSystem" purpose="AudioSystem">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="tizen" priority="P0" id="Bookmark" purpose="Bookmark">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="tizen" priority="P0" id="Content" purpose="Content">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="tizen" priority="P0" id="Download" purpose="Download">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="tizen" priority="P0" id="TizenFileSystem" purpose="Tizen Filesystem">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="tizen" priority="P0" id="MessagePort" purpose="MessagePort">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="tizen" priority="P0" id="NBS" purpose="NBS">
+        <capability name="nbs"/>
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="tizen" priority="P0" id="SystemInfo" purpose="SystemInfo">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="tizen" priority="P0" id="SystemSettingIncomingCall" purpose="SystemSetting IncomingCall">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="tizen" priority="P0" id="SystemSettingScreen" purpose="SystemSetting Screen">
+      </testcase>
+    </set>
+    <set name="Others APIs" background="brand-danger3" icon="glyphicon-gift">
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="tizen" priority="P0" id="MediaRenderer" purpose="Media Renderer">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="tizen" priority="P0" id="MediaServer" purpose="Media Server">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="tizen" priority="P0" id="NFC" purpose="NFC">
+      </testcase>
+    </set>
+    <set name="Third Party Framework" background="brand-info3" icon="glyphicon-tasks">
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="android" priority="P0" id="PDFjs" purpose="PDFjs">
+      </testcase>
+    </set>
+    <set name="Scheme" background="bs-purple3" icon="glyphicon-fire">
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="android" priority="P0" id="SchemeContent" purpose="SchemeContent">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="android" priority="P0" id="SchemesCheck" purpose="SchemesCheck">
+      </testcase>
+    </set>
+    <set name="Manifest" background="bs-purple-light3" icon="glyphicon-folder-close">
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="android" priority="P0" id="ManifestDemo1" purpose="ManifestDemo1">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="android" priority="P0" id="ManifestDemo2" purpose="ManifestDemo2">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="android" priority="P0" id="ManifestDemo3" purpose="ManifestDemo3">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="android" priority="P0" id="ManifestDemo4" purpose="ManifestDemo4">
+      </testcase>
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="android" priority="P0" id="ManifestDemo5" purpose="ManifestDemo5">
+      </testcase>
+    </set>
+    <!--
+    <set name="Cordova">
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="android" priority="P0" id="CordovaInfo" purpose="CordovaInfo">
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="android" priority="P0" id="CordovaAccelerometer" purpose="CordovaAccelerometer">
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="android" priority="P0" id="CordovaContacts" purpose="CordovaContacts">
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="android" priority="P0" id="CordovaLazyLoadJS" purpose="CordovaLazyLoadJS">
+      <testcase component="sample" type="functional_positive" status="approved" execution_type="manual" platform="android" priority="P0" id="CordovaNetwork" purpose="CordovaNetwork">
+    </set>
+    -->
+  </suite>
+</test_definition>
