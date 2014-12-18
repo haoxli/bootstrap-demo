@@ -50,10 +50,6 @@ Authors:
           border : 1px solid gray;
           text-align: center;
         }
-
-        td,th {
-          width: 25%;
-        }
     </style>
   </head>
   <body>
@@ -66,8 +62,8 @@ Authors:
     <!-- Begin page content -->
     <div class="content">
       <label class="text-center" style="width: 100%">Test Summary by Suite</label>
-      <table id="testSummary" style="width: 50%; margin-top: 10px;">
-        <tr style="background: rgba(128, 128, 128, 0.64);"><td>Suite</td><td>Passed</td><td>Failed</td><td>Not Run</td><td>Total</td></tr>
+      <table id="testSummary" style="width: 70%; margin-top: 10px;">
+        <tr style="background: rgba(128, 128, 128, 0.64);"><td width="30%">Suite</td><td width="10%">Passed</td><td width="10%">Failed</td><td width="10%">Not Run</td><td width="10%">Total</td></tr>
         <tr><td id="txtSuite"></td><td id="txtPassed"></td><td id="txtFailed"></td><td id="txtNotRun"></td><td id="txtTotal"></td></tr>
       </table>
       <label class="text-center" style="width: 100%; margin-top: 30px;">Detailed Test Results</label>

@@ -38,6 +38,7 @@
                         "samples-wrt": "samples",
                         "tests.android.xml": "tests.xml",
                         "tests_list.html": "tests_list.html",
+                        "report.html": "report.html",
                         "appVersion": "appVersion"
                     },
                     "install-path": "."
@@ -109,6 +110,7 @@
                         "samples-cordova": "samples",
                         "tests.android.xml": "tests.xml",
                         "tests_list.html": "tests_list.html",
+                        "report.html": "report.html",
                         "appVersion": "appVersion"
                     },
                     "install-path": "."
@@ -143,6 +145,7 @@
                         "samples": "samples",
                         "tests.tizen.xml": "tests.xml",
                         "tests_list.html": "tests_list.html",
+                        "report.html": "report.html",
                         "appVersion": "appVersion"
                     },
                     "install-path": ".",
@@ -187,6 +190,7 @@
                         "samples": "samples",
                         "tests.tizen.xml": "tests.xml",
                         "tests_list.html": "tests_list.html",
+                        "report.html": "report.html",
                         "appVersion": "appVersion"
                     },
                     "install-path": ".",

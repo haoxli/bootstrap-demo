@@ -50,7 +50,7 @@ function resume(err) {
         if (state == "PAUSED") {
             try {
                 tizen.download.resume(gDownloadId);
-                $("#popup_info").modal(showMessage("success", "Resumed"));
+                //$("#popup_info").modal(showMessage("success", "Resumed"));
             } catch (exc) {
                 $("#popup_info").modal(showMessage("error", "download.resume failed: " + exc.message));
             }
@@ -75,7 +75,7 @@ function pause(err) {
     } else {
         try {
             tizen.download.pause(gDownloadId);
-            $("#popup_info").modal(showMessage("success", "Paused"));
+            //$("#popup_info").modal(showMessage("success", "Paused"));
         } catch (exc) {
             $("#popup_info").modal(showMessage("error", "download.pause failed: " + exc.message));
         }
@@ -123,7 +123,7 @@ function makeFileList(files) {
         if (files[i].isDirectory == false) {
             str += '<div class="panel-body">'
                 + files[i].name
-                + '<button type="button" onclick="deleteFileFromFolder('+ i +')">Delete</button></div>';
+                + '<button type="button" class="btn btn-default btn-block" onclick="deleteFileFromFolder('+ i +')">Delete</button></div>';
         }
     }
     $("#downloadFolderList").html(str);
@@ -144,7 +144,7 @@ function deleteFileFromFolder(id) {
 
     try {
         gDocumentsDir.deleteFile(gFiles[Number(id)].fullPath, showFileList, onError);
-        $("#popup_info").modal(showMessage("success", "Download delete"));
+        //$("#popup_info").modal(showMessage("success", "Download delete"));
     } catch (exc) {
         $("#popup_info").modal(showMessage("error", "deleteFile exc: " + exc.message));
     }
@@ -203,7 +203,7 @@ function download() {
 
     try {
         gDownloadId = tizen.download.start(downloadRequest, listener);
-        $("#popup_info").modal(showMessage("success", "Download"));
+        //$("#popup_info").modal(showMessage("success", "Download"));
     } catch (exc) {
         $("#popup_info").modal(showMessage("error", "download.start failed : " + exc.message));
     }

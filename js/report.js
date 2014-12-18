@@ -58,10 +58,9 @@ function init() {
   for(var i = 0; i < snum; i++) {
     var sidres = "set" + (i + 1) + "res";
     var setarres = JSON.parse(lstorage.getItem(sidres));
-    totalnum += parseInt(setarres.totalnum);
-    passnum += parseInt(setarres.passnum);
-    failnum += parseInt(setarres.failnum);
-    notrunnum += totalnum - passnum - failnum;
+    totalnum += parseInt(setarres.totalnum == "" ? 0 : setarres.totalnum);
+    passnum += parseInt(setarres.passnum == "" ? 0 : setarres.passnum);
+    failnum += parseInt(setarres.failnum == "" ? 0 : setarres.failnum);
     var setTr = document.createElement("tr");
     var sname = document.createElement("td");
     sname.setAttribute('colSpan', 4);
@@ -104,17 +103,8 @@ function init() {
   }
   txtPassed.innerHTML = passnum;
   txtFailed.innerHTML = failnum;
-  txtNotRun.innerHTML = notrunnum;
+  txtNotRun.innerHTML = totalnum - passnum - failnum;
   txtTotal.innerHTML = totalnum;
-  /*var table = document.getElementById("resultDetail");
-  for(var i = 0; i < 5; i++) {
-    var setTr = document.createElement("tr");
-    var sname = document.createElement("td");
-    sname.style["textAlign"] = "left";
-    sname.innerHTML = "adb";
-    setTr.appendChild(sname);
-    table.appendChild(setTr); 
-  }*/
 }
 
 function downloadResult() {
@@ -171,6 +161,7 @@ function createsuccess(files) {
         }
         fs.write(resultReport);
         fs.close();
+        $("#popup_info").modal(showMessage("success", "Download 'report.csv' successfully! You can get it from '/home/app/content/Documents/'."));
       }, function(e) {
         $("#popup_info").modal(showMessage("error", "CreateFile error: " + e.message));
       }, "UTF-8");
@@ -182,6 +173,7 @@ function onerror(error) {
 }
 
 $(document).ready(function(){
+  document.getElementById('app-version').innerHTML = lstorage.getItem("app-version");
   $("#downloadResult").click(downloadResult);
   init();
 });
