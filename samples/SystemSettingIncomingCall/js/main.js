@@ -25,7 +25,7 @@ window.onload = function(){
 };
 
 function setCall() {
-  path = $("#ringtone").find("div").data("url");
+  path = $("#list").find("div").data("url");
   if(path == null || path =="") {
     $("#list").html("Error: there is no any audio file found.");
   }
@@ -98,7 +98,7 @@ function fileAudio() {
         }
         if(length == 0)
             $("#popup_info").modal(showMessage("error", "Not found Sound files\nPlease add sound files.\nAdd Path: " + documentsDir.toURI() + "/"));
-        $("#ringtone").html(str);
+        $("#list").html(str);
     }
 
     function onerror(error) {

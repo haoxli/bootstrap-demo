@@ -54,6 +54,10 @@ Authors:
     td,th {
         width: 32%;
     }
+    .deraction {
+      padding-top: 10px;
+      padding-bottom: 0px;
+    }
 </style>
 </head>
 <body>
@@ -62,29 +66,23 @@ Authors:
   </div>
   <div class="content">
       <h4>This sample demonstrates the contacts manager can create, edit, query user's contacts.</h4>
-      <div class="panel panel-primary" style="margin-bottom: 5px">
+      <div class="panel panel-primary">
           <div class="panel-heading">Contacts Save</div>
-          <div class="panel-body">Family Name:<input id="familyName" type="text" value="David" class="form-control"></input></div>
-          <div class="panel-body">Given Name:<input id="givenName" type="text" value="Beckham" class="form-control"></input></div>
+          <div class="panel-body deraction">Family Name:<input id="familyName" type="text" value="David" class="form-control"></input></div>
+          <div class="panel-body deraction">Given Name:<input id="givenName" type="text" value="Beckham" class="form-control"></input></div>
           <div class="panel-body">Phone Number:<input id="number" type="text" value="13913976543" class="form-control"></input></div>
           <div class="panel-body">
               <button id="save" type="button" class="btn btn-default btn-lg btn-block">Save</button>
           </div>
-      </div>
-      <div class="panel panel-primary" style="margin-bottom: 5px">
           <div class="panel-heading">Contacts Query</div>
-          <div class="panel-body">Family Name:<input id="queryName" type="text" class="form-control"></input></div>
+          <div class="panel-body deraction">Family Name:<input id="queryName" type="text" class="form-control"></input></div>
           <div class="panel-body">
               <div id="query" type="button" class="btn btn-default btn-lg btn-block">Query</div>
           </div>
-      </div>
-      <div id="summary" class="panel panel-primary" style="margin-bottom: 5px">
           <div class="panel-heading">Contacts Clear</div>
           <div class="panel-body">
               <div id="clear" type="button" class="btn btn-default btn-lg btn-block">Clear</div>
           </div>
-      </div>
-      <div class="panel panel-primary">
           <div class="panel-heading">Contacts List</div>
           <div class="panel-body"><table id="tableList"></table></div>
       </div>

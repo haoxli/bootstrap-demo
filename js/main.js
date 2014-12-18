@@ -127,75 +127,6 @@ function help() {
   showMessage("help", popup_info);
 }
 
-function showTestResult() {
-  showMessage("testResult", lstorage);
-  $("#downloadResult").click(downloadResult);
-}
-
-function downloadResult() {
-  //exportTableToCSV.apply(this, [$('#modal-body>table'), 'export.csv']);
-  tizen.filesystem.resolve(
-    'documents',
-    function(dir) {
-      documentsDir = dir; 
-      dir.listFiles(createsuccess, onerror);
-    }, function(e) {
-      $("#popup_info").modal(showMessage("error", "Error: " + e.message));
-    }, "rw");
-}
-
-function createsuccess(files) {
-  fileName = "report.csv";
-  if (files.length > 0) {
-    for(var i = 0; i < files.length; i++) {
-      if (files[i].isDirectory == false && files[i].name == fileName) {
-        documentsDir.deleteFile(files[i].fullPath, function () {}, function(e) {
-          $("#popup_info").modal(showMessage("error", "DeleteFile error: " + e.message));
-        });
-      }
-    }
-  }
-  var testFile = documentsDir.createFile(fileName);
-  if (testFile != null) {
-    testFile.openStream(
-      "w",
-      function(fs) {
-        var snum = parseInt(lstorage.getItem("setnum"));
-        var resultReport = "Category, Case_ID, Pass, Fail, NotRun\n";
-        for(var i = 0; i < snum; i++) {
-          var sid = "set" + (i + 1);
-          var setarr = JSON.parse(lstorage.getItem(sid));
-          var tids = setarr.tids.split(',');
-          for(var j = 0; j < tids.length; j++) {
-            var tid = tids[j];
-            var casearr = JSON.parse(lstorage.getItem(tid));
-            var tnum = parseInt(casearr.num);
-            var tpass = parseInt(casearr.pass);
-            var tfail = parseInt(casearr.fail);
-            var tresult = casearr.result;
-            resultReport += setarr.name + "," + tid;      
-            if(tnum > 1) {
-              resultReport += "," + tpass + "," + tfail + "," + (tnum-tpass-tfail) + "\n";
-            } else {
-              var pass0 = tresult == "pass" ? 1 : 0;
-              var fail0 = tresult == "fail" ? 1 : 0;
-              var notrun0 = tresult != "" ? 0 : 1;
-              resultReport += "," + pass0 + "," + fail0 + "," + notrun0 + "\n";
-            }
-          } 
-        }
-        fs.write(resultReport);
-        fs.close();
-      }, function(e) {
-        $("#popup_info").modal(showMessage("error", "CreateFile error: " + e.message));
-      }, "UTF-8");
-  }
-}
-
-function onerror(error) {
-  $("#popup_info").modal(showMessage("error", "The error " + error.message + " occurred when listing the files in the selected folder"));
-}
-
 function exit() {
   showMessage("exit", "Are you sure to exit?");
   $("#ifConfirm").click(confirmExit);
@@ -214,7 +145,6 @@ function uselstorage() {
 $(document).ready(function(){
   popup_info = $("#popup_info").html();
   $("#help").click(help);
-  //$("#showTestResult").click(showTestResult);
   $("#exit").click(exit);
   if(lstorage.getItem("test-suite") == null || lstorage.getItem("test-suite") == "DemoExpress") {
     testStorage();
