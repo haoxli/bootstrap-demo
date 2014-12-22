@@ -29,8 +29,7 @@ Authors:
         Liu, yun <yun.liu@archermind.com>
 
 -->
-<html>
-<head>
+
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -41,30 +40,27 @@ Authors:
 <script src="../../js/common.js"></script>
 <script src="../../js/tests.js"></script>
 <script src="js/main.js"></script>
-</head>
-<body>
-  <div id="header">
-    <h3 id="main_page_title"></h3>
+
+<div id="header">
+  <h3 id="main_page_title"></h3>
+</div>
+<div class="content">
+  <h4>This sample demonstrates the bookmark with add and remove operation.</h4>
+  <div class="div-bar">
+    <label class="div-bar-a">Input bookmark title: </label>
+    <input type="text" class="form-control div-bar-b" id="bookmarkTitle">
   </div>
-  <div class="content">
-    <h4>This sample demonstrates the bookmark with add and remove operation.</h4>
-    <div class="div-bar">
-      <label class="div-bar-a">Input bookmark title: </label>
-      <input type="text" class="form-control div-bar-b" id="bookmarkTitle">
-    </div>
-    <div class="div-bar">
-      <label class="div-bar-a">Input bookmark URL: </label>
-      <input type="text" class="form-control div-bar-b" id="bookmarkURL">
-    </div>
-    <div class="div-bar"><button id="add" type="button" class="btn btn-default btn-lg btn-block">Add Bookmark</button></div>
-    <div style="height: 30px; margin-top: 20px; font-size: 16px; font-weight: bold;">Bookmark list:</div>
-    <div id="bookmarklist" style='width: 100%'></div>
+  <div class="div-bar">
+    <label class="div-bar-a">Input bookmark URL: </label>
+    <input type="text" class="form-control div-bar-b" id="bookmarkURL">
   </div>
-  <div class="footer">
-    <div id="footer"></div>
-  </div>
-  <div class="modal fade" id="popup_info">
-    <p>This sample is designed by BookmarkManagerObject, BookmarkManager and BookmarkItem interfaces.</p>
-  </div>
-</body>
-</html>
+  <div class="div-bar"><button id="add" type="button" class="btn btn-default btn-lg btn-block">Add Bookmark</button></div>
+  <div style="height: 30px; margin-top: 20px; font-size: 16px; font-weight: bold;">Bookmark list:</div>
+  <div id="bookmarklist" style='width: 100%'></div>
+</div>
+<div class="footer">
+  <div id="footer"></div>
+</div>
+<div class="modal fade" id="popup_info">
+  <p>This sample is designed by BookmarkManagerObject, BookmarkManager and BookmarkItem interfaces.</p>
+</div>

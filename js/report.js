@@ -28,9 +28,8 @@ Authors:
         Liu, Yun <yunx.liu@intel.com>
 */
 
-var fileName;
-
 var lstorage = window.localStorage;
+var testSuiteName = lstorage.getItem("test-suite");
 
 function init() {
   txtSuite.innerHTML = lstorage.getItem("test-suite");
@@ -107,30 +106,48 @@ function init() {
   txtTotal.innerHTML = totalnum;
 }
 
+function getCurrentTime() {
+  var myDate = new Date();
+  var year = myDate.getFullYear();
+  var month = myDate.getMonth() + 1 < 10 ? "0" + (myDate.getMonth() + 1) : myDate.getMonth() + 1;
+  var date = myDate.getDate() < 10 ? "0" + myDate.getDate() : myDate.getDate();
+  var hours = myDate.getHours() < 10 ? "0" + myDate.getHours() : myDate.getHours();
+  var minutes = myDate.getMinutes() < 10 ? "0" + myDate.getMinutes() : myDate.getMinutes();
+  var seconds = myDate.getSeconds() < 10 ? "0" + myDate.getSeconds() : myDate.getSeconds();
+  return (year + "" + month + "" + date + "" + hours + "" + minutes + "" + seconds);
+}
+
 function downloadResult() {
   //exportTableToCSV.apply(this, [$('#resultDetail'), 'export.csv']);
   tizen.filesystem.resolve(
-    'documents',
+    'downloads',
     function(dir) {
       documentsDir = dir; 
-      dir.listFiles(createsuccess, onerror);
+      dir.listFiles(resolveSuccess, onerror);
     }, function(e) {
       $("#popup_info").modal(showMessage("error", "Error: " + e.message));
     }, "rw");
 }
 
-function createsuccess(files) {
-  fileName = "report.csv";
+function resolveSuccess(files) {
+  var time = getCurrentTime();
+  var fileName = testSuiteName + "_" + time + ".report.csv";
+  var fsTestDir;
   if (files.length > 0) {
     for(var i = 0; i < files.length; i++) {
-      if (files[i].isDirectory == false && files[i].name == fileName) {
-        documentsDir.deleteFile(files[i].fullPath, function () {}, function(e) {
-          $("#popup_info").modal(showMessage("error", "DeleteFile error: " + e.message));
-        });
+      if (files[i].isDirectory) {
+        documentsDir.deleteDirectory(
+          files[i].fullPath,
+          true,
+          function(){
+          }, function(e) {
+            $("#popup_info").modal(showMessage("error", "Error" + e.message));
+          });
       }
     }
   }
-  var testFile = documentsDir.createFile(fileName);
+  fsTestDir = documentsDir.createDirectory(testSuiteName);
+  var testFile = fsTestDir.createFile(fileName);
   if (testFile != null) {
     testFile.openStream(
       "w",
@@ -161,7 +178,7 @@ function createsuccess(files) {
         }
         fs.write(resultReport);
         fs.close();
-        $("#popup_info").modal(showMessage("success", "Download 'report.csv' successfully! You can get it from '/home/app/content/Documents/'."));
+        $("#popup_info").modal(showMessage("success", "Download 'report.csv' successfully! You can get it from '/home/app/content/Downloads/" + testSuiteName + "/'."));
       }, function(e) {
         $("#popup_info").modal(showMessage("error", "CreateFile error: " + e.message));
       }, "UTF-8");

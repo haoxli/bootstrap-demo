@@ -104,7 +104,7 @@ function fileImage() {
                     {
                         var Url = files[i].toURI();
                         Url = Url.replace("file:///", "/");
-                        str += '<div class="panel-body" data-url="' + Url + '"><img src="' + files[i].toURI() + '" alt="" />' + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + files[i].name + '</div>';
+                        str += '<div class="panel-body" data-url="' + Url + '"><img src="' + files[i].toURI() + '" alt="" />' + "<span class='nbsp3'>" + files[i].name + '</span></div>';
                         length++;
                         if(length >= 6)
                             break;

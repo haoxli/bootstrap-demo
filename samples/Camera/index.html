@@ -29,48 +29,44 @@ Authors:
         Xin, liu <xinx.liu@intel.com>
 
 -->
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width">
-        <link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
-        <link rel="stylesheet" type="text/css" href="../../css/main.css">
-        <script src="../../js/jquery-1.11.1.min.js"></script>
-        <script src="../../js/bootstrap.min.js"></script>
-        <script src="../../js/common.js"></script>
-        <script src="../../js/tests.js"></script>
-        <script src="js/main.js"></script>
-        <style>
-            #observateEare {
-                border: black solid 1px;
-                height: 300px;
-            }
-            #photoShow {
-                height: 210px;
-                line-height:210px;
-            }
-        </style>
-    </head>
-    <body>
-        <div id="header">
-            <h3 id="main_page_title"></h3>
-        </div>
-        <div class="content">
-            <h4>This sample demonstrates the app opens a device camera, previews the image automatically, then presents the captured photo.</h4>
-            <div id="observateEare" align="center">
-              <p id="filename"></p>
-              <div id="photoShow" align="center"></div>
-            </div>
-            <input type="file" id="files" accept="image/*" capture="camera" style="display: none;" />
-            <div class="div-bar">
-              <button id="button" type="button" class="btn btn-default btn-lg btn-block">Launch camera to take a photo</button>
-            </div>
-        </div>
-        <div class="footer">
-          <div id="footer"></div>
-        </div>
-        <div class="modal fade" id="popup_info">
-          <p>The Camera feature: MediaCapture interface.</p>
-        </div>
-    </body>
-</html>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width">
+<link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../../css/main.css">
+<script src="../../js/jquery-1.11.1.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/common.js"></script>
+<script src="../../js/tests.js"></script>
+<script src="js/main.js"></script>
+<style>
+  #observateEare {
+    border: black solid 1px;
+    height: 300px;
+  }
+  #photoShow {
+    height: 210px;
+    line-height:210px;
+  }
+</style>
+
+<div id="header">
+  <h3 id="main_page_title"></h3>
+</div>
+<div class="content">
+  <h4>This sample demonstrates the app opens a device camera, previews the image automatically, then presents the captured photo.</h4>
+  <div id="observateEare" align="center">
+    <p id="filename"></p>
+    <div id="photoShow" align="center"></div>
+  </div>
+  <input type="file" id="files" accept="image/*" capture="camera" style="display: none;" />
+  <div class="div-bar">
+    <button id="button" type="button" class="btn btn-default btn-lg btn-block">Launch camera to take a photo</button>
+  </div>
+</div>
+<div class="footer">
+  <div id="footer"></div>
+</div>
+<div class="modal fade" id="popup_info">
+  <p>The Camera feature: MediaCapture interface.</p>
+</div>

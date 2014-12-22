@@ -30,99 +30,93 @@ Authors:
 
 -->
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width" />
-    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="../../css/main.css">
-    <script src="../../js/jquery-1.11.1.min.js"></script>
-    <script src="../../js/bootstrap.min.js"></script>
-    <script src="../../js/common.js"></script>
-    <script src="../../js/tests.js"></script>
-    <script src="js/main.js"></script>
-    <style>
-        #consolelog {
-           width: 98%;
-           height: 250px;
-           overflow: auto;
-           border: 1px solid;
-           margin: 0px auto;
-        }
-    </style>
-  </head>
-  <body>
-    <div id="header">
-      <h3 id="main_page_title"></h3>
-    </div>
-    <div class="content">
-      <div id="consolelog">
-      </div>
-      <div id="contentbutton">
-         <div class="div-bar">
-           <div class="bar-grid-c"><button id="add_service_listener_btn" type="button" class="btn btn-default btn-lg btn-block">Add Service Listeners</button></div>
-           <div class="bar-grid-c"><button id="add_call_listeners_btn" type="button" class="btn btn-default btn-lg btn-block">Add Call Listeners</button></div>
-           <div class="bar-grid-c"><button id="services_btn" type="button" class="btn btn-default btn-lg btn-block">Get Services</button></div>
-           <div class="bar-grid-c"><button id="get_dservice_btn" type="button" class="btn btn-default btn-lg btn-block">Get Default Service</button></div>
-         </div>
-         <div class="div-bar">
-           <div class="bar-grid-d"><button id="active_call_btn" type="button" class="btn btn-default btn-lg btn-block">Get Active Call</button></div>
-           <div class="bar-grid-d"><button id="get_calls_btn" type="button" class="btn btn-default btn-lg btn-block">Get All Calls</button></div>
-           <div class="bar-grid-d"><button id="dial_btn" type="button" class="btn btn-default btn-lg btn-block">Dial</button></div>
-           <div class="bar-grid-d" style="text-align: right; padding-top:10px;">Number: </div>
-           <div class="bar-grid-d"><input type="text" class="form-control" id="dial_input"/></div>
-         </div>
-         <div class="div-bar">
-           <div class="bar-grid-d"><button id="conf_btn" type="button" class="btn btn-default btn-lg btn-block">Create Conference</button></div>
-           <div class="bar-grid-d"><button id="conf_parties_btn" type="button" class="btn btn-default btn-lg btn-block">Get Conference Participants</button></div>
-           <div class="bar-grid-d"><button id="split_btn" type="button" class="btn btn-default btn-lg btn-block">Split</button></div>
-           <div class="bar-grid-d" style="text-align: right; padding-top:10px;">Call Id: </div>
-           <div class="bar-grid-d"><input type="text" class="form-control" id="split_input"/></div>
-         </div>
-         <div class="div-bar">
-           <div class="bar-grid-c"><button id="disconnect_btn" type="button" class="btn btn-default btn-lg btn-block">Disconnect Active Call</button></div>
-           <div class="bar-grid-c"><button id="disconnect_all_btn" type="button" class="btn btn-default btn-lg btn-block">Disconnect All Calls</button></div>
-           <div class="bar-grid-c"><button id="hold_btn" type="button" class="btn btn-default btn-lg btn-block">Hold Active Call</button></div>
-           <div class="bar-grid-c"><button id="resume_btn" type="button" class="btn btn-default btn-lg btn-block">Resume Held Call</button></div>
-         </div>
-         <div class="div-bar">
-           <div class="bar-grid-c"><button id="accept_btn" type="button" class="btn btn-default btn-lg btn-block">Accept Incoming/Waiting Call</button></div>
-           <div class="bar-grid-c"><button id="deflect_btn" type="button" class="btn btn-default btn-lg btn-block">Deflect Incoming/Waiting Call</button></div>
-           <div class="bar-grid-c" style="text-align: right; padding-top:10px;">To Number: </div>
-           <div class="bar-grid-c"><input type="text" class="form-control" id="deflect_input"/></div>
-         </div>
-         <div class="div-bar">
-           <div class="bar-grid-c"><button id="transfer_btn" type="button" class="btn btn-default btn-lg btn-block">Transfer Incoming/Waiting call</button></div>
-           <div class="bar-grid-c"><button id="emerg_nr_btn" type="button" class="btn btn-default btn-lg btn-block">Get Emergency Numbers</button></div>
-           <div class="bar-grid-c"><button id="remove_call_listeners_btn" type="button" class="btn btn-default btn-lg btn-block">Remove Call Listeners</button></div>
-           <div class="bar-grid-c"><button id="remove_service_listeners_btn" type="button" class="btn btn-default btn-lg btn-block">Remove Service Listeners</button></div>
-         </div>
-         <div class="div-bar">
-           <div class="bar-grid-d"><button id="sendtones_btn" type="button" class="btn btn-default btn-lg btn-block">Send Tones</button></div>
-           <div class="bar-grid-d" style="text-align: right; padding-top:10px;">[0..9, A..F, p]: </div>
-           <div class="bar-grid-d"><input type="text" class="form-control" id="tones_input"/></div>
-           <div class="bar-grid-d"><button id="starttone_btn" type="button" class="btn btn-default btn-lg btn-block">Start Tone</button></div>
-           <div class="bar-grid-d"><button id="endtone_btn" type="button" class="btn btn-default btn-lg btn-block">End Tone</button></div>
-         </div>
-         <div class="div-bar">
-           <div class="bar-grid-c" style="text-align: right; padding-top:10px;">Service Id: </div>
-           <div class="bar-grid-c"><input type="text" class="form-control" id="service_id_input"/></div>
-           <div class="bar-grid-c"><button id="get_service_btn" type="button" class="btn btn-default btn-lg btn-block">Show</button></div>
-           <div class="bar-grid-c"><button id="set_dservice_btn" type="button" class="btn btn-default btn-lg btn-block">Set As Default</button></div>
-         </div>
-         <div class="div-bar">
-           <div class="bar-grid-b"><button id="enable_service_btn" type="button" class="btn btn-default btn-lg btn-block">Enable Service</button></div>
-           <div class="bar-grid-b"><button id="disable_service_btn" type="button" class="btn btn-default btn-lg btn-block">Disable Service</button></div>
-           <div class="bar-grid-b"><button id="clearconsole_btn" type="button" class="btn btn-default btn-lg btn-block">Clear Console Output</button></div>
-         </div>
-      </div>
-    </div>
-    <div class="footer">
-      <div id="footer"></div>
-    </div>
-    <div class="modal fade" id="popup_info">
-      <p>Verifies the telephony is supported and valid</p>
-    </div>
-  </body>
-</html>
+<meta charset="utf-8" />
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width" />
+<link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../../css/main.css">
+<script src="../../js/jquery-1.11.1.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/common.js"></script>
+<script src="../../js/tests.js"></script>
+<script src="js/main.js"></script>
+<style>
+    #consolelog {
+       width: 98%;
+       height: 250px;
+       overflow: auto;
+       border: 1px solid;
+       margin: 0px auto;
+    }
+</style>
+
+<div id="header">
+  <h3 id="main_page_title"></h3>
+</div>
+<div class="content">
+  <div id="consolelog">
+  </div>
+  <div id="contentbutton">
+     <div class="div-bar">
+       <div class="bar-grid-c"><button id="add_service_listener_btn" type="button" class="btn btn-default btn-lg btn-block">Add Service Listeners</button></div>
+       <div class="bar-grid-c"><button id="add_call_listeners_btn" type="button" class="btn btn-default btn-lg btn-block">Add Call Listeners</button></div>
+       <div class="bar-grid-c"><button id="services_btn" type="button" class="btn btn-default btn-lg btn-block">Get Services</button></div>
+       <div class="bar-grid-c"><button id="get_dservice_btn" type="button" class="btn btn-default btn-lg btn-block">Get Default Service</button></div>
+     </div>
+     <div class="div-bar">
+       <div class="bar-grid-d"><button id="active_call_btn" type="button" class="btn btn-default btn-lg btn-block">Get Active Call</button></div>
+       <div class="bar-grid-d"><button id="get_calls_btn" type="button" class="btn btn-default btn-lg btn-block">Get All Calls</button></div>
+       <div class="bar-grid-d"><button id="dial_btn" type="button" class="btn btn-default btn-lg btn-block">Dial</button></div>
+       <div class="bar-grid-d" style="text-align: right; padding-top:10px;">Number: </div>
+       <div class="bar-grid-d"><input type="text" class="form-control" id="dial_input"/></div>
+     </div>
+     <div class="div-bar">
+       <div class="bar-grid-d"><button id="conf_btn" type="button" class="btn btn-default btn-lg btn-block">Create Conference</button></div>
+       <div class="bar-grid-d"><button id="conf_parties_btn" type="button" class="btn btn-default btn-lg btn-block">Get Conference Participants</button></div>
+       <div class="bar-grid-d"><button id="split_btn" type="button" class="btn btn-default btn-lg btn-block">Split</button></div>
+       <div class="bar-grid-d" style="text-align: right; padding-top:10px;">Call Id: </div>
+       <div class="bar-grid-d"><input type="text" class="form-control" id="split_input"/></div>
+     </div>
+     <div class="div-bar">
+       <div class="bar-grid-c"><button id="disconnect_btn" type="button" class="btn btn-default btn-lg btn-block">Disconnect Active Call</button></div>
+       <div class="bar-grid-c"><button id="disconnect_all_btn" type="button" class="btn btn-default btn-lg btn-block">Disconnect All Calls</button></div>
+       <div class="bar-grid-c"><button id="hold_btn" type="button" class="btn btn-default btn-lg btn-block">Hold Active Call</button></div>
+       <div class="bar-grid-c"><button id="resume_btn" type="button" class="btn btn-default btn-lg btn-block">Resume Held Call</button></div>
+     </div>
+     <div class="div-bar">
+       <div class="bar-grid-c"><button id="accept_btn" type="button" class="btn btn-default btn-lg btn-block">Accept Incoming/Waiting Call</button></div>
+       <div class="bar-grid-c"><button id="deflect_btn" type="button" class="btn btn-default btn-lg btn-block">Deflect Incoming/Waiting Call</button></div>
+       <div class="bar-grid-c" style="text-align: right; padding-top:10px;">To Number: </div>
+       <div class="bar-grid-c"><input type="text" class="form-control" id="deflect_input"/></div>
+     </div>
+     <div class="div-bar">
+       <div class="bar-grid-c"><button id="transfer_btn" type="button" class="btn btn-default btn-lg btn-block">Transfer Incoming/Waiting call</button></div>
+       <div class="bar-grid-c"><button id="emerg_nr_btn" type="button" class="btn btn-default btn-lg btn-block">Get Emergency Numbers</button></div>
+       <div class="bar-grid-c"><button id="remove_call_listeners_btn" type="button" class="btn btn-default btn-lg btn-block">Remove Call Listeners</button></div>
+       <div class="bar-grid-c"><button id="remove_service_listeners_btn" type="button" class="btn btn-default btn-lg btn-block">Remove Service Listeners</button></div>
+     </div>
+     <div class="div-bar">
+       <div class="bar-grid-d"><button id="sendtones_btn" type="button" class="btn btn-default btn-lg btn-block">Send Tones</button></div>
+       <div class="bar-grid-d" style="text-align: right; padding-top:10px;">[0..9, A..F, p]: </div>
+       <div class="bar-grid-d"><input type="text" class="form-control" id="tones_input"/></div>
+       <div class="bar-grid-d"><button id="starttone_btn" type="button" class="btn btn-default btn-lg btn-block">Start Tone</button></div>
+       <div class="bar-grid-d"><button id="endtone_btn" type="button" class="btn btn-default btn-lg btn-block">End Tone</button></div>
+     </div>
+     <div class="div-bar">
+       <div class="bar-grid-c" style="text-align: right; padding-top:10px;">Service Id: </div>
+       <div class="bar-grid-c"><input type="text" class="form-control" id="service_id_input"/></div>
+       <div class="bar-grid-c"><button id="get_service_btn" type="button" class="btn btn-default btn-lg btn-block">Show</button></div>
+       <div class="bar-grid-c"><button id="set_dservice_btn" type="button" class="btn btn-default btn-lg btn-block">Set As Default</button></div>
+     </div>
+     <div class="div-bar">
+       <div class="bar-grid-b"><button id="enable_service_btn" type="button" class="btn btn-default btn-lg btn-block">Enable Service</button></div>
+       <div class="bar-grid-b"><button id="disable_service_btn" type="button" class="btn btn-default btn-lg btn-block">Disable Service</button></div>
+       <div class="bar-grid-b"><button id="clearconsole_btn" type="button" class="btn btn-default btn-lg btn-block">Clear Console Output</button></div>
+     </div>
+  </div>
+</div>
+<div class="footer">
+  <div id="footer"></div>
+</div>
+<div class="modal fade" id="popup_info">
+  <p>Verifies the telephony is supported and valid</p>
+</div>

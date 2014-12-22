@@ -29,8 +29,7 @@ Authors:
         Xu, Kang <kangx.xu@intel.com>
 
 -->
-<html>
-<head>
+
 <meta charset="utf-8" />
 <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width" />
 <link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
@@ -41,43 +40,40 @@ Authors:
 <script src="../../js/tests.js"></script>
 <script src="js/main.js"></script>
 <style>
-    #view {
-        border: 1px solid black;
-        margin: 15px;
-        height: 66px;
-        text-align: center;
-    }
-    #test {
-      padding: 10px;
-      margin: 5px auto;
-    }
+  #view {
+    border: 1px solid black;
+    margin: 15px;
+    height: 66px;
+    text-align: center;
+  }
+  #test {
+    padding: 10px;
+    margin: 5px auto;
+  }
 </style>
-</head>
-<body>
-  <div id="header">
-    <h3 id="main_page_title"></h3>
-  </div>
-  <div class="content">
-      <h4>This sample demonstrates the CSS3 media features for adapting the same content to different output devices and screens.</h4>
-      <div id="view">
-          <div id="media">This content display in right color if test device satisfy the CSS3 Media Queries.</div>
-      </div>
-      <div id="test">
-        <p>The content can be set to green color if the device aspect ratio is less than or equal to 1/2</p>
-        <button id="apply1" type="button" class="btn btn-default btn-lg btn-block">Set green</button>
-        <p class="div-bar">The content can be set to red color if the device aspect ratio is more than or equal to 1/10</p>
-        <button id="apply2" type="button" class="btn btn-default btn-lg btn-block">Set red</button>
-        <p class="div-bar">The content can be set to blue color if the device height is less than or equal to 1300px</p>
-        <button id="apply3" type="button" class="btn btn-default btn-lg btn-block">Set blue</button>
-        <p class="div-bar">The content can be set to yellow color if the device height is more than or equal to 100px</p>
-        <button id="apply4" type="button" class="btn btn-default btn-lg btn-block">Set yellow</button>
-      </div>
-  </div>
-  <div class="footer">
-    <div id="footer"></div>
-  </div>
-  <div class="modal fade" id="popup_info">
-    <p>It is designed by device-aspect-ratio and device-height properties of CSS @media</p>
-  </div>
-</body>
-</html>
+
+<div id="header">
+  <h3 id="main_page_title"></h3>
+</div>
+<div class="content">
+    <h4>This sample demonstrates the CSS3 media features for adapting the same content to different output devices and screens.</h4>
+    <div id="view">
+        <div id="media">This content display in right color if test device satisfy the CSS3 Media Queries.</div>
+    </div>
+    <div id="test">
+      <p>The content can be set to green color if the device aspect ratio is less than or equal to 1/2</p>
+      <button id="apply1" type="button" class="btn btn-default btn-lg btn-block">Set green</button>
+      <p class="div-bar">The content can be set to red color if the device aspect ratio is more than or equal to 1/10</p>
+      <button id="apply2" type="button" class="btn btn-default btn-lg btn-block">Set red</button>
+      <p class="div-bar">The content can be set to blue color if the device height is less than or equal to 1300px</p>
+      <button id="apply3" type="button" class="btn btn-default btn-lg btn-block">Set blue</button>
+      <p class="div-bar">The content can be set to yellow color if the device height is more than or equal to 100px</p>
+      <button id="apply4" type="button" class="btn btn-default btn-lg btn-block">Set yellow</button>
+    </div>
+</div>
+<div class="footer">
+  <div id="footer"></div>
+</div>
+<div class="modal fade" id="popup_info">
+  <p>It is designed by device-aspect-ratio and device-height properties of CSS @media</p>
+</div>

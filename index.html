@@ -29,66 +29,46 @@ Authors:
         Lin, Wanming <wanmingx.lin@intel.com>
 
 -->
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="css/main.css" rel="stylesheet" type="text/css">
-    <script src="js/jquery-1.11.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/exportTableToCSV.js"></script>
-    <script src="js/common.js"></script>
-    <script src="js/main.js"></script>
-    <style>
-        table {
-          border-collapse: collapse;
-          width: 100%;
-        }
 
-        table,td,th {
-          border : 1px solid gray;
-          text-align: center;
-        }
-
-        td,th {
-          width: 25%;
-        }
-    </style>
-  </head>
-  <body>
-    <!-- Heading -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container">
-        <h3 class="text-center" style="font-weight:bold">DemoExpress<a class="btn btn-default pull-right" href="#" role="button" id="app-version"></a></h3>
-      </div>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/exportTableToCSV.js"></script>
+<script src="js/common.js"></script>
+<script src="js/main.js"></script>
+<!-- Heading -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <h3 class="text-center" id="main_title" style="font-weight:bold"><a class="btn btn-default pull-right" href="#" role="button" id="app-version"></a></h3>
+  </div>
+</div>
+<!-- Begin page content -->
+<div class="container-fluid">
+  <div class="row" id="myset">
+    <!-- Begin set content -->
+  </div>
+</div>
+<!-- Footer -->
+<div class="footer">
+  <div class="container text-center">
+    <div class="btn-group">
+      <button type="button" id="help" class="btn btn-default" data-toggle='modal' data-target='#popup_info'>
+        <span class="glyphicon glyphicon-info-sign"></span><span class="nbsp">Help</span>
+      </button>
+      <button type="button" id="showTestResult" class="btn btn-default" onclick="document.location.href='report.html'">
+        <span class="glyphicon glyphicon-leaf"></span><span class="nbsp">Report</span>
+      </button>
+      <button type="button" id="exit" class="btn btn-default" data-toggle='modal' data-target='#popup_info'>
+        <span class="glyphicon glyphicon-log-out"></span><span class="nbsp">Exit</span>
+      </button>
     </div>
-    <!-- Begin page content -->
-    <div class="container-fluid">
-      <div class="row" id="myset">
-        <!-- Begin set content -->
-      </div>
-    </div>
-    <!-- Footer -->
-    <div class="footer">
-      <div class="container text-center">
-        <div class="btn-group">
-          <button type="button" id="help" class="btn btn-default" data-toggle='modal' data-target='#popup_info'>
-            <span class="glyphicon glyphicon-info-sign"></span>&nbsp;Help
-          </button>
-          <button type="button" id="showTestResult" class="btn btn-default" onclick="document.location.href='report.html'">
-            <span class="glyphicon glyphicon-leaf"></span>&nbsp;Report
-          </button>
-          <button type="button" id="exit" class="btn btn-default" data-toggle='modal' data-target='#popup_info'>
-            <span class="glyphicon glyphicon-log-out"></span>&nbsp;Exit
-          </button>
-        </div>
-      </div>
-    </div>
-    <div id="popup_info" class="modal fade">
-        <p>&nbsp;&nbsp;This sample demonstrates the basic usage of standard APIs that are supported by Crosswalk.&nbsp;&nbsp;</p>
-        <p>&nbsp;&nbsp;Please refer to the API spec details to <a href="https://crosswalk-project.org/#documentation/apis/web_apis">https://crosswalk-project.org/#documentation/apis/web_apis</a>&nbsp;&nbsp;</p>
-    </div>
-  </body>
-</html>
+  </div>
+</div>
+<div id="popup_info" class="modal fade">
+    <p class="nbsp2">This sample demonstrates the basic usage of standard APIs that are supported by Crosswalk.</p>
+    <p class="nbsp2">Please refer to the API spec details to <a href="https://crosswalk-project.org/#documentation/apis/web_apis">https://crosswalk-project.org/#documentation/apis/web_apis</a></p>
+</div>

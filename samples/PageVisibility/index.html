@@ -29,43 +29,39 @@ Authors:
         Zhang, Jing <jingx.zhang@intel.com>
 
 -->
-<html>
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width" />
-  <link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
-  <link rel="stylesheet" type="text/css" href="../../css/main.css">
-  <script src="../../js/jquery-1.11.1.min.js"></script>
-  <script src="../../js/bootstrap.min.js"></script>
-  <script src="../../js/common.js"></script>
-  <script src="../../js/tests.js"></script>
-  <script src="js/main.js"></script>
-</head>
-<body>
-    <div id="header">
-      <h3 id="main_page_title"></h3>
-    </div>
-    <div class="content">
-        <h4>This sample demonstrates the device is able to handle pageVisible event when lock and unlock the screen by gesture.</h4>
-        <div>
-            <p>1.Press power key to lock the screen, then press power key again to unlock the screen.</p>
-            <p>2.Check if the visibilitystate attribute is set to hidden and the hidden attribute is set to true when lock the screen.</p>
-            <div class="panel panel-primary" style="margin-bottom: 5px">
-              <div id="homeList1" class="panel-heading">Screen-lock State</div>
-              <div class="panel-body" id="lock"></div>
-            </div>
-            <p style="margin-top: 10px">Check if the visibilitystate attribute is set to visible and the hidden attribute is set to false when unlock the screen.</p>
-            <div class="panel panel-primary">
-              <div id="homeList2" class="panel-heading">Screen-unlock State</div>
-              <div class="panel-body" id="unlock"></div>
-            </div>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width" />
+<link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../../css/main.css">
+<script src="../../js/jquery-1.11.1.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/common.js"></script>
+<script src="../../js/tests.js"></script>
+<script src="js/main.js"></script>
+
+<div id="header">
+  <h3 id="main_page_title"></h3>
+</div>
+<div class="content">
+    <h4>This sample demonstrates the device is able to handle pageVisible event when lock and unlock the screen by gesture.</h4>
+    <div>
+        <p>1.Press power key to lock the screen, then press power key again to unlock the screen.</p>
+        <p>2.Check if the visibilitystate attribute is set to hidden and the hidden attribute is set to true when lock the screen.</p>
+        <div class="panel panel-primary" style="margin-bottom: 5px">
+          <div id="homeList1" class="panel-heading">Screen-lock State</div>
+          <div class="panel-body" id="lock"></div>
+        </div>
+        <p style="margin-top: 10px">Check if the visibilitystate attribute is set to visible and the hidden attribute is set to false when unlock the screen.</p>
+        <div class="panel panel-primary">
+          <div id="homeList2" class="panel-heading">Screen-unlock State</div>
+          <div class="panel-body" id="unlock"></div>
         </div>
     </div>
-    <div class="footer">
-      <div id="footer"></div>
-    </div>
-    <div class="modal fade" id="popup_info">
-      <p>The Page Visibility features: visibilityState, hidden attribute.</p>
-    </div>
-</body>
-</html>
+</div>
+<div class="footer">
+  <div id="footer"></div>
+</div>
+<div class="modal fade" id="popup_info">
+  <p>The Page Visibility features: visibilityState, hidden attribute.</p>
+</div>

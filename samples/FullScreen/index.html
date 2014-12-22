@@ -30,58 +30,52 @@ Authors:
 
 -->
 
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width">
-    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="../../css/main.css">
-    <script src="../../js/jquery-1.11.1.min.js"></script>
-    <script src="../../js/bootstrap.min.js"></script>
-    <script src="../../js/common.js"></script>
-    <script src="../../js/tests.js"></script>
-    <script src="js/main.js"></script>
-    <style>
-        div:full-screen {
-            opacity: 0;
-        }
-        div:-webkit-full-screen {
-            opacity: 0;
-        }
-        :full-screen-ancestor {
-            opacity: 1;
-            background: green;
-        }
-        :-webkit-full-screen-ancestor {
-            background: green;
-        }
-    </style>
-  </head>
-  <body>
-    <div id="header">
-      <h3 id="main_page_title"></h3>
+<meta charset="utf-8" />
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width">
+<link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../../css/main.css">
+<script src="../../js/jquery-1.11.1.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/common.js"></script>
+<script src="../../js/tests.js"></script>
+<script src="js/main.js"></script>
+<style>
+    div:full-screen {
+        opacity: 0;
+    }
+    div:-webkit-full-screen {
+        opacity: 0;
+    }
+    :full-screen-ancestor {
+        opacity: 1;
+        background: green;
+    }
+    :-webkit-full-screen-ancestor {
+        background: green;
+    }
+</style>
+
+<div id="header">
+  <h3 id="main_page_title"></h3>
+</div>
+<div class="content">
+  <h4>This sample demonstrates the full screen mode and CSS full screen mode could be enabled and cancelled. The CSS full screen mode is filled with green color in background.</h4>
+  <div class="panel panel-primary">
+    <div class="panel-heading" id="labelFullScreen">FullScreen</div>
+    <div class="panel-body" id ="buttonFullScreen">
+      <button type="button" id="requestFullScreen" class="btn btn-default btn-lg btn-block">Request</button>
+      <button type="button" id="cancelFullScreen" class="hideButton btn btn-default btn-lg btn-block">Cancel FullScreen</button>
     </div>
-    <div class="content">
-      <h4>This sample demonstrates the full screen mode and CSS full screen mode could be enabled and cancelled. The CSS full screen mode is filled with green color in background.</h4>
-      <div class="panel panel-primary">
-        <div class="panel-heading" id="labelFullScreen">FullScreen</div>
-        <div class="panel-body" id ="buttonFullScreen">
-          <button type="button" id="requestFullScreen" class="btn btn-default btn-lg btn-block">Request</button>
-          <button type="button" id="cancelFullScreen" class="hideButton btn btn-default btn-lg btn-block">Cancel FullScreen</button>
-        </div>
-        <div class="panel-heading" id="labelcssFullScreen">CSS FullScreen</div>
-        <div class="panel-body" id ="buttoncssFullScreen">
-          <button type="button" id="cssFullScreen" class="btn btn-default btn-lg btn-block">Request</button>
-          <button type="button" id="cancelCssFullScreen" class="hideButton btn btn-default btn-lg btn-block">Cancel CSS FullScreen</button>
-        </div>
-      </div>
+    <div class="panel-heading" id="labelcssFullScreen">CSS FullScreen</div>
+    <div class="panel-body" id ="buttoncssFullScreen">
+      <button type="button" id="cssFullScreen" class="btn btn-default btn-lg btn-block">Request</button>
+      <button type="button" id="cancelCssFullScreen" class="hideButton btn btn-default btn-lg btn-block">Cancel CSS FullScreen</button>
     </div>
-    <div class="footer">
-      <div id="footer"></div>
-    </div>
-    <div class="modal fade" id="popup_info">
-      <p>The Full Screen features: requestFullScreen and cancelFullScreen method, full-screen-ancestor and full-screen pseudo-class.</p>
-    </div>
-  </body>
-  </body>
-</html>
+  </div>
+</div>
+<div class="footer">
+  <div id="footer"></div>
+</div>
+<div class="modal fade" id="popup_info">
+  <p>The Full Screen features: requestFullScreen and cancelFullScreen method, full-screen-ancestor and full-screen pseudo-class.</p>
+</div>

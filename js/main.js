@@ -92,6 +92,7 @@ function testStorage() {
 }
 
 function listSet() {
+  $('#main_title').append(lstorage.getItem("test-suite"));
   document.getElementById('app-version').innerHTML = lstorage.getItem("app-version");
   var snum = parseInt(lstorage.getItem("setnum"));
   for(var i = 0; i < snum; i++) {

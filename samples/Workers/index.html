@@ -29,8 +29,7 @@ Authors:
         Xu, Kang <kangx.xu@intel.com>
 
 -->
-<html>
-<head>
+
 <meta charset="utf-8" />
 <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width" />
 <link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
@@ -41,34 +40,31 @@ Authors:
 <script src="../../js/tests.js"></script>
 <script src="js/main.js"></script>
 <style>
-    #view {
-        border: 1px solid black;
-        margin-bottom: 20px;
-        height: 100px;
-        text-align: center;
-    }
+  #view {
+    border: 1px solid black;
+    margin-bottom: 20px;
+    height: 100px;
+    text-align: center;
+  }
 
-    #outPut {
-        font-size: 20px;
-    }
+  #outPut {
+    font-size: 20px;
+  }
 </style>
-</head>
-<body>
-  <div id="header">
-    <h3 id="main_page_title"></h3>
+
+<div id="header">
+  <h3 id="main_page_title"></h3>
+</div>
+<div class="content">
+  <h4>This sample runs scripts in parallel to the main page.</h4>
+  <div id="view">
+    <div id="outPut">1+2+3+....+100000&nbsp=&nbsp?</div>
   </div>
-  <div class="content">
-    <h4>This sample runs scripts in parallel to the main page.</h4>
-      <div id="view">
-          <div id="outPut">1+2+3+....+100000&nbsp=&nbsp?</div>
-      </div>
-      <div id="start" type="button" class="btn btn-default btn-lg btn-block" onclick="start()">Calculate</div>
-  </div>
-  <div class="footer">
-    <div id="footer"></div>
-  </div>
-  <div class="modal fade" id="popup_info">
-    <p>The Workers feature: Worker interface.</p>
-  </div>
-</body>
-</html>
+  <div id="start" type="button" class="btn btn-default btn-lg btn-block" onclick="start()">Calculate</div>
+</div>
+<div class="footer">
+  <div id="footer"></div>
+</div>
+<div class="modal fade" id="popup_info">
+  <p>The Workers feature: Worker interface.</p>
+</div>

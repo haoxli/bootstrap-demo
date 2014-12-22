@@ -29,50 +29,46 @@ Authors:
         Shentu, Jiazhen <jiazhenx.shentu@intel.com>
 
 -->
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width">
-    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="../../css/main.css">
-    <script src="../../js/jquery-1.11.1.min.js"></script>
-    <script src="../../js/bootstrap.min.js"></script>
-    <script src="../../js/common.js"></script>
-    <script src="../../js/tests.js"></script>
-    <script src="js/main.js"></script>
-  </head>
-  <body>
-    <div id="header">
-      <h3 id="main_page_title"></h3>
-    </div>
 
-    <div class="content">
-      <h4>This sample demonstrates the Session History with two effects: this page is added 10 session history state from 1 - 10, backing or forwarding to current history state by clicking 'Back' or 'Forward'.</h4>
-      <div class="panel panel-primary">
-        <div class="panel-heading">
-          Current history state
-        </div>
-          <div class="panel-body" id="sessionID"></div>
-      </div>
+<meta charset="utf-8" />
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width">
+<link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../../css/main.css">
+<script src="../../js/jquery-1.11.1.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/common.js"></script>
+<script src="../../js/tests.js"></script>
+<script src="js/main.js"></script>
 
-      <div class="div-bar">
-        <div class="bar-grid-a">
-          <button id="sback" type="button" class="btn btn-default btn-lg btn-block">
-            <span class="glyphicon glyphicon-chevron-left navbar-left"></span><span>Back</span>
-          </button>
-        </div>
-        <div class="bar-grid-a">
-          <button id="sforward" type="button" class="btn btn-default btn-lg btn-block"/>
-            <span>Forward</span><span class="glyphicon glyphicon-chevron-right navbar-right"></span>
-          </button>
-        </div>
-      </div>
+<div id="header">
+  <h3 id="main_page_title"></h3>
+</div>
+
+<div class="content">
+  <h4>This sample demonstrates the Session History with two effects: this page is added 10 session history state from 1 - 10, backing or forwarding to current history state by clicking 'Back' or 'Forward'.</h4>
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      Current history state
     </div>
-    <div class="footer">
-      <div id="footer"></div>
+      <div class="panel-body" id="sessionID"></div>
+  </div>
+
+  <div class="div-bar">
+    <div class="bar-grid-a">
+      <button id="sback" type="button" class="btn btn-default btn-lg btn-block">
+        <span class="glyphicon glyphicon-chevron-left navbar-left"></span><span>Back</span>
+      </button>
     </div>
-    <div class="modal fade" id="popup_info">
-      <p>This sample is designed by history and PopStateEvent interface.</p>
+    <div class="bar-grid-a">
+      <button id="sforward" type="button" class="btn btn-default btn-lg btn-block"/>
+        <span>Forward</span><span class="glyphicon glyphicon-chevron-right navbar-right"></span>
+      </button>
     </div>
-  </body>
-</html>
+  </div>
+</div>
+<div class="footer">
+  <div id="footer"></div>
+</div>
+<div class="modal fade" id="popup_info">
+  <p>This sample is designed by history and PopStateEvent interface.</p>
+</div>

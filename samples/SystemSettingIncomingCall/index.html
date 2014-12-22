@@ -18,8 +18,7 @@ Authors:
         Choi, Jongheon <j-h.choi@samsung.com>
 
 -->
-<html>
-<head>
+
 <meta charset="utf-8" />
 <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width" />
 <link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
@@ -29,28 +28,25 @@ Authors:
 <script src="../../js/common.js"></script>
 <script src="../../js/tests.js"></script>
 <script src="js/main.js"></script>
-</head>
-<body>
-    <div id="header">
-      <h3 id="main_page_title"></h3>
-    </div>
-    <div class="content">
-        <h4>This sample demonstrates System setting feature basic functionalities by setting an audio as "INCOMING_CALL" ring tone and getting "INCOMING_CALL" ring tone path.</h4>
-        <div>Note: Make sure there is audio file in ringtones floder.</div>
-        <div class="panel panel-primary">
-            <div class="panel-heading">Set Call Ringtone</div>
-            <div id="list" class="panel-body">N/A</div>
-        </div>
-        <audio data-controls="true" style="width:100%;" id="MyAudio"></audio>
-        <button onclick="javascript:setCall()" id="setCall" type="button" class="btn btn-default btn-lg btn-block" style="margin-top: 5px;">set</button>
-        <button onclick="javascript:getPath()" id="getPath" type="button" class="btn btn-default btn-lg btn-block">get path</button>
-        <button onclick="javascript:play()" id="play" type="button" class="btn btn-default btn-lg btn-block">play</button>
-    </div>
-    <div class="footer">
-      <div id="footer"></div>
-    </div>
-    <div class="modal fade" id="popup_info">
-      <p>The SystemSettingIncomingCall feature: SystemSettingManager interface</p>
-    </div>
-</body>
-</html>
+
+<div id="header">
+  <h3 id="main_page_title"></h3>
+</div>
+<div class="content">
+  <h4>This sample demonstrates System setting feature basic functionalities by setting an audio as "INCOMING_CALL" ring tone and getting "INCOMING_CALL" ring tone path.</h4>
+  <div>Note: Make sure there is audio file in ringtones floder.</div>
+  <div class="panel panel-primary">
+      <div class="panel-heading">Set Call Ringtone</div>
+      <div id="list" class="panel-body">N/A</div>
+  </div>
+  <audio data-controls="true" style="width:100%;" id="MyAudio"></audio>
+  <button onclick="javascript:setCall()" id="setCall" type="button" class="btn btn-default btn-lg btn-block" style="margin-top: 5px;">set</button>
+  <button onclick="javascript:getPath()" id="getPath" type="button" class="btn btn-default btn-lg btn-block">get path</button>
+  <button onclick="javascript:play()" id="play" type="button" class="btn btn-default btn-lg btn-block">play</button>
+</div>
+<div class="footer">
+  <div id="footer"></div>
+</div>
+<div class="modal fade" id="popup_info">
+  <p>The SystemSettingIncomingCall feature: SystemSettingManager interface</p>
+</div>
