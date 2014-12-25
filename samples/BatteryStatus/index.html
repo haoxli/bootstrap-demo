@@ -30,8 +30,6 @@ Authors:
 
 -->
 
-<html>
-<head>
 <title>BatteryStatus</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
@@ -54,26 +52,22 @@ Authors:
   }
 </style>
 
-</head>
-<body>
-  <div id="header">
-    <h3 id="main_page_title">BatteryStatus</h3>
+<div id="header">
+  <h3 id="main_page_title">BatteryStatus</h3>
+</div>
+<div class="content">
+  <h4>This sample demonstrates the battery status of device by charging/discharging the device.</h4>
+  <div class="d">
+    <canvas id="myCanvas" width="1000"></canvas>
+    <p id="charging" class="f">Charging status: N/A</p>
+    <p id="discharging" class="f">Discharging time: N/A</p>
   </div>
-  <div class="content">
-    <h4>This sample demonstrates the battery status of device by charging/discharging the device.</h4>
-    <div class="d">
-      <canvas id="myCanvas" width="1000"></canvas>
-      <p id="charging" class="f">Charging status: N/A</p>
-      <p id="discharging" class="f">Discharging time: N/A</p>
-    </div>
-    <p id="charging"></p>
-    <p id="discharging"></p>
-  </div>
-  <div class="footer">
-    <div id="footer"></div>
-  </div>
-  <div class="modal fade" id="popup_info">
-    <p>This sample is designed by the levelchange, chargingchange, dischargingtimechange events of Battery interface</p>
-  </div>
-</body>
-</html>
+  <p id="charging"></p>
+  <p id="discharging"></p>
+</div>
+<div class="footer">
+  <div id="footer"></div>
+</div>
+<div class="modal fade" id="popup_info">
+  <p>This sample is designed by the levelchange, chargingchange, dischargingtimechange events of Battery interface</p>
+</div>

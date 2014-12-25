@@ -29,46 +29,41 @@ Authors:
         Cui, Jieqiong <jieqiongx.cui@intel.com>
 
 -->
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width">
-    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="../../css/slider.css">
-    <link rel="stylesheet" type="text/css" href="../../css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <script src="../../js/jquery-1.11.1.min.js"></script>
-    <script src="../../js/bootstrap.min.js"></script>
-    <script src="../../js/common.js"></script>
-    <script src="../../js/tests.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/jquery/bootstrap-slider.js"></script>
-  </head>
-  <body>
-    <div id="header">
-      <h3 id="main_page_title"></h3>
-    </div>
-    <div class="content">
-      <h4>This sample demonstrates the audio playback with play, pause and replay operation.</h4>
-      <div id="contentdiv">
-        <audio id="MediaPlayback" controls="controls">
-          <source src="../../res/media/w3c/sound_5.oga" type="audio/ogg">
-          Not Support ...
-        </audio>
-      </div>
-      <label class="textArr">Volume</label>
-      <div style="width: 98%; margin-top: 30px; margin-left: 1%"><input id="slider-1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="60" style="width: 100%"/></div>
-      <div style="margin-top: 15px;">
-        <button onclick="javascript:play()" type="button" class="btn btn-default btn-lg btn-block">Play</button>
-        <button onclick="javascript:pause()" type="button" class="btn btn-default btn-lg btn-block">Pause</button>
-        <button onclick="javascript:replay()" type="button" class="btn btn-default btn-lg btn-block">Replay</button>
-      </div>
-    </div>
-    <div class="footer">
-      <div id="footer"></div>
-    </div>
-    <div class="modal fade" id="popup_info">
-      <p><h4>This sample is designed by &lt;audio&gt; tag.</h4></p>
-    </div>
-  </body>
-</html>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width">
+<link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../../css/slider.css">
+<link rel="stylesheet" type="text/css" href="../../css/main.css">
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script src="../../js/jquery-1.11.1.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/common.js"></script>
+<script src="../../js/tests.js"></script>
+<script src="js/main.js"></script>
+<script src="js/jquery/bootstrap-slider.js"></script>
+<div id="header">
+  <h3 id="main_page_title"></h3>
+</div>
+<div class="content">
+  <h4>This sample demonstrates the audio playback with play, pause and replay operation.</h4>
+  <div id="contentdiv">
+    <audio id="MediaPlayback" controls="controls">
+      <source src="../../res/media/w3c/sound_5.oga" type="audio/ogg">
+      Not Support ...
+    </audio>
+  </div>
+  <label class="textArr">Volume</label>
+  <div style="width: 98%; margin-top: 30px; margin-left: 1%"><input id="slider-1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="60" style="width: 100%"/></div>
+  <div style="margin-top: 15px;">
+    <button onclick="javascript:play()" type="button" class="btn btn-default btn-lg btn-block">Play</button>
+    <button onclick="javascript:pause()" type="button" class="btn btn-default btn-lg btn-block">Pause</button>
+    <button onclick="javascript:replay()" type="button" class="btn btn-default btn-lg btn-block">Replay</button>
+  </div>
+</div>
+<div class="footer">
+  <div id="footer"></div>
+</div>
+<div class="modal fade" id="popup_info">
+  <p><h4>This sample is designed by &lt;audio&gt; tag.</h4></p>
+</div>

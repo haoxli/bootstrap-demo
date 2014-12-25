@@ -29,61 +29,56 @@ Authors:
         Liu, Yun <yunx.liu@intel.com>
 
 -->
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="css/main.css" rel="stylesheet" type="text/css">
-    <script src="js/jquery-1.11.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/exportTableToCSV.js"></script>
-    <script src="js/common.js"></script>
-    <script src="js/report.js"></script>
-    <style>
-        table {
-          border-collapse: collapse;
-          width: 100%;
-        }
 
-        table,td,th {
-          border : 1px solid gray;
-          text-align: center;
-        }
-    </style>
-  </head>
-  <body>
-    <!-- Heading -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container">
-        <h3 class="text-center" style="font-weight:bold">Test Report<a class="btn btn-default pull-right" href="#" role="button" id="app-version"></a></h3>
-      </div>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/exportTableToCSV.js"></script>
+<script src="js/common.js"></script>
+<script src="js/report.js"></script>
+<style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    table,td,th {
+      border : 1px solid gray;
+      text-align: center;
+    }
+</style>
+<!-- Heading -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <h3 class="text-center" style="font-weight:bold">Test Report<a class="btn btn-default pull-right" href="#" role="button" id="app-version"></a></h3>
+  </div>
+</div>
+<!-- Begin page content -->
+<div class="content">
+  <label class="text-center" style="width: 100%">Test Summary by Suite</label>
+  <table id="testSummary" style="width: 70%; margin-top: 10px;">
+    <tr style="background: rgba(128, 128, 128, 0.64);"><td width="30%">Suite</td><td width="10%">Passed</td><td width="10%">Failed</td><td width="10%">Not Run</td><td width="10%">Total</td></tr>
+    <tr><td id="txtSuite"></td><td id="txtPassed"></td><td id="txtFailed"></td><td id="txtNotRun"></td><td id="txtTotal"></td></tr>
+  </table>
+  <label class="text-center" style="width: 100%; margin-top: 30px;">Detailed Test Results</label>
+  <table id="resultDetail" style="margin-top: 10px;"></table>
+</div>
+<!-- Footer -->
+<div class="footer">
+  <div class="container text-center">
+    <div class="btn-group">
+      <button type="button" id="downloadResult" class="btn btn-default">
+        <span class="glyphicon glyphicon-download-alt"></span><span class="nbsp">Download</span>
+      </button>
+      <button type="button" class="btn btn-default" onclick="document.location.href='index.html'">
+        <span class="glyphicon glyphicon-circle-arrow-left"></span><span class="nbsp">Back</span>
+      </button>
     </div>
-    <!-- Begin page content -->
-    <div class="content">
-      <label class="text-center" style="width: 100%">Test Summary by Suite</label>
-      <table id="testSummary" style="width: 70%; margin-top: 10px;">
-        <tr style="background: rgba(128, 128, 128, 0.64);"><td width="30%">Suite</td><td width="10%">Passed</td><td width="10%">Failed</td><td width="10%">Not Run</td><td width="10%">Total</td></tr>
-        <tr><td id="txtSuite"></td><td id="txtPassed"></td><td id="txtFailed"></td><td id="txtNotRun"></td><td id="txtTotal"></td></tr>
-      </table>
-      <label class="text-center" style="width: 100%; margin-top: 30px;">Detailed Test Results</label>
-      <table id="resultDetail" style="margin-top: 10px;"></table>
-    </div>
-    <!-- Footer -->
-    <div class="footer">
-      <div class="container text-center">
-        <div class="btn-group">
-          <button type="button" id="downloadResult" class="btn btn-default">
-            <span class="glyphicon glyphicon-download-alt"></span>&nbsp;Download
-          </button>
-          <button type="button" class="btn btn-default" onclick="document.location.href='index.html'">
-            <span class="glyphicon glyphicon-circle-arrow-left"></span>&nbsp;Back
-          </button>
-        </div>
-      </div>
-    </div>
-    <div id="popup_info" class="modal fade">
-    </div>
-  </body>
-</html>
+  </div>
+</div>
+<div id="popup_info" class="modal fade">
+</div>

@@ -30,8 +30,6 @@ Authors:
 
 -->
 
-<html>
-<head>
 <title>Presentation</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
@@ -49,31 +47,28 @@ Authors:
     margin-bottom: 20px;
   }
 </style>
-</head>
-<body>
-  <div id="header">
-    <h3 id="main_page_title"></h3>
+
+<div id="header">
+  <h3 id="main_page_title"></h3>
+</div>
+<div class="content">
+   <h4>This sample demonstrates the external displays from within web applications.</h4>
+   <p>Connect to a external displays or turn on 'Simulate Secondary Display' in 'Setting'->'Developer options'.</p>
+  <div class="d">
+    <p id="available">Display Availability: N/A</p>
+    <p id="result">Result: N/A</p>
+    <p id="message">Received message: N/A</p>
   </div>
-  <div class="content">
-     <h4>This sample demonstrates the external displays from within web applications.</h4>
-     <p>Connect to a external displays or turn on 'Simulate Secondary Display' in 'Setting'->'Developer options'.</p>
-    <div class="d">
-      <p id="available">Display Availability: N/A</p>
-      <p id="result">Result: N/A</p>
-      <p id="message">Received message: N/A</p>
-    </div>
-    <div>
-      <button onclick="javascript:requestShow()" id="requestShow" type="button" class="tagBtn btn btn-default btn-lg btn-block">Request Show Presentation</button>
-    </div>
-    <div style="margin-top: 5px">
-      <button onclick="javascript:closePresentationWindow()" id="closePresentation" type="button" class="tagBtn btn btn-default btn-lg btn-block">Close Presentation</button>
-    </div>
+  <div>
+    <button onclick="javascript:requestShow()" id="requestShow" type="button" class="tagBtn btn btn-default btn-lg btn-block">Request Show Presentation</button>
   </div>
-  <div class="footer">
-    <div id="footer"></div>
+  <div style="margin-top: 5px">
+    <button onclick="javascript:closePresentationWindow()" id="closePresentation" type="button" class="tagBtn btn btn-default btn-lg btn-block">Close Presentation</button>
   </div>
-  <div class="modal fade" id="popup_info">
-    <p>This sample is designed by Presentation displayAvailable event</p>
-  </div>
-</body>
-</html>
+</div>
+<div class="footer">
+  <div id="footer"></div>
+</div>
+<div class="modal fade" id="popup_info">
+  <p>This sample is designed by Presentation displayAvailable event</p>
+</div>

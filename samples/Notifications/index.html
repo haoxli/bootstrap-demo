@@ -30,8 +30,6 @@ Authors:
 
 -->
 
-<html>
-<head>
 <title>Notification</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
@@ -41,25 +39,22 @@ Authors:
 <script src="../../js/common.js"></script>
 <script src="../../js/tests.js"></script>
 <script src="js/main.js"></script>
-</head>
-<body>
-  <div id="header">
-    <h3 id="main_page_title"></h3>
+
+<div id="header">
+  <h3 id="main_page_title"></h3>
+</div>
+<div class="content">
+  <h4>This sample use the device's native notification mechanism to display messages to the user.</h4>
+  <div>
+    <button onclick="javascript:showNotification()" id="showNotification" type="button" class="tagBtn btn btn-default btn-lg btn-block">Show Notification</button>
   </div>
-  <div class="content">
-    <h4>This sample use the device's native notification mechanism to display messages to the user.</h4>
-    <div>
-      <button onclick="javascript:showNotification()" id="showNotification" type="button" class="tagBtn btn btn-default btn-lg btn-block">Show Notification</button>
-    </div>
-    <div style="margin-top: 5px">
-      <button onclick="javascript:closeNotification()" id="closeNotification" type="button" class="tagBtn btn btn-default btn-lg btn-block">Close Notification</button>
-    </div>
+  <div style="margin-top: 5px">
+    <button onclick="javascript:closeNotification()" id="closeNotification" type="button" class="tagBtn btn btn-default btn-lg btn-block">Close Notification</button>
   </div>
-  <div class="footer">
-    <div id="footer"></div>
-  </div>
-  <div class="modal fade" id="popup_info">
-    <p>The Notification features: close and show method.</p>
-  </div>
-</body>
-</html>
+</div>
+<div class="footer">
+  <div id="footer"></div>
+</div>
+<div class="modal fade" id="popup_info">
+  <p>The Notification features: close and show method.</p>
+</div>
