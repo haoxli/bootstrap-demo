@@ -28,33 +28,47 @@ Authors:
 <script src="../../js/common.js"></script>
 <script src="../../js/tests.js"></script>
 <script src="js/main.js"></script>
+<style type="text/css">
+  .deraction {
+    margin-bottom: 0px;
+  }
+</style>
 
 <div id="header">
   <h3 id="main_page_title"></h3>
 </div>
 <div class="content">
-  <div class="panel panel-primary" style="margin-bottom: 0px;">
-    <div class="panel-heading">AlarmTest Install</div>
+  <div class="panel panel-primary deraction">
+    <div class="panel-heading">Recipient</div>
     <div class="panel-body">
-        <div type="button" class="btn btn-default btn-lg btn-block" id="install" style="height:40px; line-height:20px;">AlarmTest Install</div>
+        <input id="email" type="email" value="" />
     </div>
-    <div class="panel-heading">Alarm List</div>
+    <div class="panel-heading">CC</div>
+    <div class="panel-body">
+        <input id="cc" type="email" value="" />
+    </div>
+    <div class="panel-heading">BCC</div>
+    <div class="panel-body">
+        <input id="bcc" type="email" value="" />
+    </div>
+    <div class="panel-heading">Title</div>
+    <div class="panel-body">
+        <input type="text" id="title" value="Behavior_Test E-mail" />
+    </div>
+    <div class="panel-heading">Email Content</div>
+    <div class="panel-body">
+        <textarea id="emailContent" style="min-height:200px; width:99%;">Behavior_Test_Messaging_Email</textarea>
+    </div>
+    <div class="panel-heading">Attachments</div>
+    <div class="panel-body">
+        <div data-role="button" id="addAttach">Add attachment</div>
+    </div>
   </div>
-  <div class="panel panel-primary" style="margin-bottom: 0px;" id="alarm-all-list"></div>
+  <div class="panel panel-primary deraction" id="attachmentsList" style="font-size:12pt; word-wrap:break-word;"></div>
   <div class="panel panel-primary">
-    <div class="panel-heading">Absolute Alarm Time</div>
+    <div class="panel-heading">Email Send</div>
     <div class="panel-body">
-        <input type="datetime" name="alarm-time" id="alarm-time" value="0000-00-00T00:00Z" />
-    </div>
-    <div class="panel-heading">Absolute Alarm Repeat interval(sec)</div>
-    <div class="panel-body"><input id="absolute-alarm-period" name="absolute-alarm-period" data-popupenabled="false" type="range" value="50" min="0" max="99" /></div>
-    <div class="panel-heading">Absolute Alarm Add</div>
-    <div class="panel-body">
-        <div type="button" class="btn btn-default btn-lg btn-block" id="absolute-alarm-save" onclick="addAlarmAbsolute()">Absolute Save</div>
-    </div>
-    <div class="panel-heading">Alarm Delete</div>
-    <div class="panel-body">
-        <div type="button" class="btn btn-default btn-lg btn-block" id="alarm-remove-all" onclick="removeAll()">Delete all</div>
+      <div data-role="button" id="send">Email Send</div>
     </div>
   </div>
 </div>
@@ -62,5 +76,5 @@ Authors:
   <div id="footer"></div>
 </div>
 <div class="modal fade" id="popup_info">
-  <p>Check if an application is launched on time</p><br>
+  <p>Check if the email is successfully sent</p><br>
 </div>

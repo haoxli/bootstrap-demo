@@ -35,39 +35,39 @@ Authors:
   #image img {margin:5px; width:65px; height:70px}
   #audio img {margin:5px; width:70px; height:70px}
   #video img {margin:5px; width:70px; height:70px}
-  .deraction {padding-bottom: 0px;}
+  .deraction {margin-bottom: 0px;}
 </style>
 
 <div id="header">
   <h3 id="main_page_title"></h3>
 </div>
 <div class="content">
-    <div class="panel panel-primary deraction">
-        <div class="panel-heading">AppControl Image</div>
+  <div class="panel panel-primary deraction">
+    <div class="panel-heading">AppControl Image</div>
+  </div>
+  <div class="panel panel-primary deraction" id="image"></div>
+  <div class="panel panel-primary deraction">
+    <div class="panel-heading">AppControl Audio</div>
+  </div>
+  <div class="panel panel-primary deraction" id="audio"></div>
+  <div class="panel panel-primary deraction">
+    <div class="panel-heading">AppControl Video</div>
+  </div>
+  <div class="panel panel-primary deraction" id="video"></div>
+  <div class="panel panel-primary">
+    <div class="panel-heading">AppControl File</div>
+    <div class="panel-body">
+      <div type="button" id="allFile" class="btn btn-default btn-lg btn-block" onclick="setAppControlFile('*/*')">All File</div>
+      <div type="button" id="imageFile" class="btn btn-default btn-lg btn-block" onclick="setAppControlFile('image/*')">Image File</div>
+      <div type="button" id="audioFile" class="btn btn-default btn-lg btn-block" onclick="setAppControlFile('audio/*')">Audio File</div>
+      <div type="button" id="videoFile" class="btn btn-default btn-lg btn-block" onclick="setAppControlFile('video/*')">Video File</div>
     </div>
-    <div class="panel panel-primary deraction" id="image"></div>
-    <div class="panel panel-primary deraction">
-        <div class="panel-heading">AppControl Audio</div>
+    <div class="panel-heading">AppControl Browser</div>
+    <div class="panel-body">
+      <div type="button" id="tizen" class="btn btn-default btn-lg btn-block" onclick="setAppControlBrowser('https://www.tizen.org')">https://www.tizen.org</div>
     </div>
-    <div class="panel panel-primary deraction" id="audio"></div>
-    <div class="panel panel-primary deraction">
-        <div class="panel-heading">AppControl Video</div>
-    </div>
-    <div class="panel panel-primary deraction" id="video"></div>
-    <div class="panel panel-primary deraction">
-        <div class="panel-heading">AppControl File</div>
-        <div class="panel-body">
-          <div type="button" id="allFile" class="btn btn-default btn-lg btn-block" onclick="setAppControlFile('*/*')">All File</div>
-          <div type="button" id="imageFile" class="btn btn-default btn-lg btn-block" onclick="setAppControlFile('image/*')">Image File</div>
-          <div type="button" id="audioFile" class="btn btn-default btn-lg btn-block" onclick="setAppControlFile('audio/*')">Audio File</div>
-          <div type="button" id="videoFile" class="btn btn-default btn-lg btn-block" onclick="setAppControlFile('video/*')">Video File</div>
-        </div>
-        <div class="panel-heading">AppControl Browser</div>
-        <div class="panel-body">
-          <div type="button" id="tizen" class="btn btn-default btn-lg btn-block" onclick="setAppControlBrowser('https://www.tizen.org')">https://www.tizen.org</div>
-        </div>
-        <div class="panel-body"><input type="text" id="url" value="http://" class="form-control bar-grid-a" style="width: 49%; margin-left: 5px; margin-right: 5px;"/><div type="button" id="browser" class="btn btn-default btn-lg btn-block bar-grid-a" style="width: 49%; margin-left: 5px; margin-right: 5px;" onclick="browser()">Browser</div></div>
-    </div>
+    <div class="panel-body"><input type="text" id="url" value="http://" class="form-control bar-grid-a" style="width: 49%; margin-left: 5px; margin-right: 5px;"/><div type="button" id="browser" class="btn btn-default btn-lg btn-block bar-grid-a" style="width: 49%; margin-left: 5px; margin-right: 5px;" onclick="browser()">Browser</div></div>
+  </div>
 </div>
 <div class="footer">
   <div id="footer"></div>
