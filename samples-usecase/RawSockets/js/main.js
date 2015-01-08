@@ -97,8 +97,9 @@ function disconnectRowSockets() {
 
 function sendRowSockets() {
     testFlag.red = true;
-    TCPsocket.send($("#socketinput").attr("value"));
-    $("#socketinput").attr("value", "");
+    var data = $("#socketinput").val();
+    TCPsocket.send(data);
+    $("#socketinput").val("");
     $("#chatbox").text("TCPSocket - send - " + data + "\n" + $("#chatbox").text());
     status();
 }
