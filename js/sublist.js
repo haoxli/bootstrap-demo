@@ -91,7 +91,7 @@ $(document).ready(function(){
   popup_info = $("#popup_info").html();
   $("#subhelp").click(help);
   $("#subback").click(back);
-  document.getElementById('app-version').innerHTML = lstorage.getItem("app-version");
+  //document.getElementById('app-version').innerHTML = lstorage.getItem("app-version");
   $('#casename').append(tid);
   document.title = tid;
   listSubcase();
