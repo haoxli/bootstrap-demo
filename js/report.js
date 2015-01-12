@@ -191,6 +191,9 @@ function onerror(error) {
 
 $(document).ready(function(){
   document.getElementById('app-version').innerHTML = lstorage.getItem("app-version");
+  if (typeof tizen != "undefined") {
+    $("#btn-group").html("<button type='button' id='downloadResult' class='btn btn-default'><span class='glyphicon glyphicon-download-alt'></span><span class='nbsp'>Download</span></button>" + $("#btn-group").html());
+  }
   $("#downloadResult").click(downloadResult);
   init();
 });
