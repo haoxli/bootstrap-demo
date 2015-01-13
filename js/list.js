@@ -52,9 +52,14 @@ function listTest() {
     var turl = "samples/" + tid + "/index.html?tid=" + tid;
     var resultline = "";
     var midstyle = 'style=\"height:26px; line-height:26px\"';
-    passnum = tresult == "pass" ? passnum + 1 : passnum;
-    failnum = tresult == "fail" ? failnum + 1 : failnum;
-    if(tresult != "" && tnum > 1) {
+    if(tnum > 1) {
+      passnum = passnum + casearr.pass;
+      failnum = failnum + casearr.fail;
+    } else {
+      passnum = tresult == "pass" ? passnum + 1 : passnum;
+      failnum = tresult == "fail" ? failnum + 1 : failnum;
+   } 
+   if(tresult != "" && tnum > 1) {
       resultline = '<span class=\"label label-primary\" style=\"margin-right:5px\">Total:' + tnum + '</span>\n'
                     + '<span class=\"label label-success\">' + tpass + '</span>\n'
                     + '<span class=\"label label-danger\">' + tfail + '</span>\n'
