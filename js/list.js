@@ -36,6 +36,7 @@ function listTest() {
   var sname = setarr.name;
   document.title = sname;
   $('#setname').append(sname);
+  showMessage("help", sname + " Demos");
   var tids = setarr.tids.split(',');
   var tbg = "color-swatches " + setarr.background;
   var ticon = "glyphicon " + setarr.icon;
