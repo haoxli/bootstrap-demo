@@ -47,7 +47,7 @@ function testStorage() {
   var sname, sbg, sicon, tid, tnum, tids, tpass, tfail, setarr, setresarr, casearr, testsuite;
   /** get&set app-version **/
   var version = "";
-  $(getApps("appVersion", "json")).each(function() {
+  $(getApps("VERSION", "json")).each(function() {
     version = $(this).attr("app-version");
   });
   lstorage.setItem("app-version", version);
