@@ -43,7 +43,7 @@ function downloaded() {
     }
 }
 
-function resume(err) {
+function resume() {
     if (gDownloadId != undefined) {
         var state = tizen.download.getState(gDownloadId);
 
@@ -62,7 +62,7 @@ function resume(err) {
     }
 }
 
-function pause(err) {
+function pause() {
     if (gDownloadId == undefined) {
         $("#popup_info").modal(showMessage("error", "No download in progress"));
         return false;
@@ -82,7 +82,7 @@ function pause(err) {
     }
 }
 
-function cancel(err) {
+function cancel() {
     if (gDownloadId == undefined) {
         $("#popup_info").modal(showMessage("error", "No download in progress"));
         return false;
