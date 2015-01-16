@@ -36,7 +36,11 @@ function listTest() {
   var sname = setarr.name;
   document.title = sname;
   $('#setname').append(sname);
-  showMessage("help", sname + " Demos");
+  if (lstorage.getItem("test-suite") == "DemoExpress") {
+    showMessage("help", sname + " Demos");
+  } else {
+    showMessage("help", sname + " Usecases");
+  }
   var tids = setarr.tids.split(',');
   var tbg = "color-swatches " + setarr.background;
   var ticon = "glyphicon " + setarr.icon;
