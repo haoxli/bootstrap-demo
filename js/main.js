@@ -96,6 +96,8 @@ function listSet() {
   if (lstorage.getItem("test-suite") != "DemoExpress") {
     $("#btn-group").html('<button type="button" id="showTestResult" class="btn btn-default" onclick="document.location.href=\'report.html\'"><span class="glyphicon glyphicon-leaf"></span><span class="nbsp">Report</span></button>' + $("#btn-group").html());
   }
+  $("#help").click(help);
+  $("#exit").click(exit);
   document.getElementById('app-version').innerHTML = lstorage.getItem("app-version");
   var snum = parseInt(lstorage.getItem("setnum"));
   for(var i = 0; i < snum; i++) {
@@ -159,8 +161,6 @@ function uselstorage() {
 
 $(document).ready(function(){
   popup_info = $("#popup_info").html();
-  $("#help").click(help);
-  $("#exit").click(exit);
   if (lstorage.getItem("test-suite") == null || lstorage.getItem("test-suite") == "DemoExpress") {
     testStorage();
   } else {
