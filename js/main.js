@@ -134,6 +134,17 @@ function exit() {
 }
 
 function confirmExit() {
+  try {
+    var app = tizen.application.getCurrentApplication();
+    app.exit();
+  } catch(error) {
+    closeWindow();
+  } finally {
+    closeWindow();
+  }
+}
+
+function closeWindow() {
   window.open('', '_self');
   window.close();
 }
@@ -147,7 +158,10 @@ $(document).ready(function(){
   popup_info = $("#popup_info").html();
   $("#help").click(help);
   $("#exit").click(exit);
-  if(lstorage.getItem("test-suite") == null || lstorage.getItem("test-suite") == "DemoExpress") {
+  if (lstorage.getItem("test-suite") != "DemoExpress") {
+    $("#btn-group").html('<button type="button" id="showTestResult" class="btn btn-default" onclick="document.location.href=\'report.html\'"><span class="glyphicon glyphicon-leaf"></span><span class="nbsp">Report</span></button>' + $("#btn-group").html());
+  }
+  if (lstorage.getItem("test-suite") == null || lstorage.getItem("test-suite") == "DemoExpress") {
     testStorage();
   } else {
     if(sstorage.getItem("lsflag") == null) {
